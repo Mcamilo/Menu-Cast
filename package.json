@@ -1,0 +1,16 @@
+{
+  "name": "menu-cast",
+  "version": "1.0.0",
+  "description": "Demo Menu de Podcast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Matheus Camilo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.4"
+  }
+}
