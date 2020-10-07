@@ -1,17 +1,20 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
+var cookieParser = require('cookie-parser');
 
 const routes = require('./routes')
-
-const port = 8080
+const port = 8888
 const server = express()
 
+server.use(express.static(__dirname + '/public'))
 server.use(cors())
+server.use(cookieParser())
 // set json for requests
 server.use(express.json())
 // set routes for requests
 server.use(routes)
-// set port
-server.listen(port)
+console.log(`Listening on port: ${port}`);
 
-console.log("Rodando")
+// set port
+server.listen(process.env.PORT || port)
